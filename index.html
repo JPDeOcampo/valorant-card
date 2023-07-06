@@ -1,0 +1,507 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
+    <title>Document</title>
+</head>
+<body>
+    <header>
+        <h1>Valorant</h1>
+        <input type="text" class="search" id="search" name="search" onkeyup="mySearch()" placeholder="Search..."/>
+        <select class="category" id="category" name="category" onchange="filterSelection(value)">
+          <option value="all">All</option>
+          <option value="controller">Controller</option>
+          <option value="duelist">Duelist</option>
+          <option value="initiator">Initiator</option>
+          <option value="sentinel">Sentinel</option>
+        </select>
+    </header>
+    <main>
+        <div class="containers">
+          <div class="container d-none" id="controller" name="controller">
+            <h2 id="val-agent" name="val-agent"><a>Astra</a></h2>
+            <p>アストラ</p>
+            <div class="card astra">
+              <div class="card-logo-top">
+                <div class="tri-left-top"></div>
+                <div class="tri-right-top"></div>
+              </div>
+              <div class="border">
+                <p class="p-top">Astra</p>
+                <div class="tri-top"></div>
+                <p class="p-vertical p-lt">アストラ</p>
+                <img class="val-type vt-rt" src="./Val Agents/Type/controller.png" alt="controller"/>
+                <p class="p-vertical p-rt p-type" id="val-type" name="val-type">controller</p>
+                <div class="tri-bot"></div>
+                <p class="p-bottom">Astra</p>
+              </div>
+              <div class="card-logo-bottom">
+                <div class="tri-left-bottom"></div>
+                <div class="tri-right-bottom"></div>
+              </div>
+            </div>
+            <img class="val-agents" src="./Val Agents/Astra/Astra.png" alt="Astra"/>
+          </div>
+          <div class="container d-none" id="initiator" name="initiator">
+            <h2 id="val-agent" name="val-agent"><a>Breach</a></h2>
+            <p>突破口</p>
+            <div class="card breach">
+              <div class="card-logo-top">
+                <div class="tri-left-top"></div>
+                <div class="tri-right-top"></div>
+              </div>
+              <div class="border">
+                <p class="p-top">Breach</p>
+                <div class="tri-top"></div>
+                <p class="p-vertical p-lb">突破口</p>
+                <img class="val-type vt-rb" src="./Val Agents/Type/initiator.png" alt="initiator"/>
+                <p class="p-vertical p-rb p-type" id="val-type" name="val-type">initiator</p>
+                <div class="tri-bot"></div>
+                <p class="p-bottom">Breach</p>
+              </div>
+              <div class="card-logo-bottom">
+                <div class="tri-left-bottom"></div>
+                <div class="tri-right-bottom"></div>
+              </div>
+            </div>
+            <img class="val-agents" src="./Val Agents/Breach/Breach.png" alt="Breach"/>
+          </div>
+          <div class="container d-none" id="controller" name="controller">
+            <h2 id="val-agent" name="val-agent">Brimstone</h2>
+            <p>ブリムストーン</p>
+            <div class="card brim">
+              <div class="card-logo-top">
+                <div class="tri-left-top"></div>
+                <div class="tri-right-top"></div>
+              </div>
+              <div class="border">
+                <p class="p-top">Brimstone</p>
+                <div class="tri-top"></div>
+                <p class="p-vertical p-lb">ブリムストーン</p>
+                <img class="val-type vt-rt" src="./Val Agents/Type/controller.png" alt="controller"/>
+                <p class="p-vertical p-rt p-type" id="val-type" name="val-type">controller</p>
+                <div class="tri-bot"></div>
+                <p class="p-bottom">Brimstone</p>
+              </div>
+              <div class="card-logo-bottom">
+                <div class="tri-left-bottom"></div>
+                <div class="tri-right-bottom"></div>
+              </div>
+            </div>
+            <img class="val-agents" src="./Val Agents/Brimstone/Brim.png" alt="Brimstone"/>
+          </div>
+          <div class="container d-none" id="sentinel" name="sentinel">
+            <h2 id="val-agent" name="val-agent">Chamber</h2>
+            <p>ブリムストーン</p>
+            <div class="card chamber">
+              <div class="card-logo-top">
+                <div class="tri-left-top"></div>
+                <div class="tri-right-top"></div>
+              </div>
+              <div class="border" >
+                <p class="p-top">Chamber</p>
+                <div class="tri-top"></div>
+                <p class="p-vertical p-lt">チャンバー</p>
+                <img class="val-type vt-rb" src="./Val Agents/Type/sentinel.png" alt="sentinel"/>
+                <p class="p-vertical p-rb p-type" id="val-type" name="val-type">sentinel</p>
+                <div class="tri-bot"></div>
+                <p class="p-bottom">Chamber</p>
+              </div>
+              <div class="card-logo-bottom">
+                <div class="tri-left-bottom"></div>
+                <div class="tri-right-bottom"></div>
+              </div>
+            </div>
+            <img class="val-agents" src="./Val Agents/Chamber/Chamber.png" alt="Chamber"/>
+          </div>
+          <div class="container d-none" id="sentinel" name="sentinel">
+            <h2 id="val-agent" name="val-agent">Cypher</h2>
+            <p>サイファー</p>
+            <div class="card cypher">
+              <div class="card-logo-top">
+                <div class="tri-left-top"></div>
+                <div class="tri-right-top"></div>
+              </div>
+              <div class="border">
+                <p class="p-top">Cypher</p>
+                <div class="tri-top"></div>
+                <p class="p-vertical p-lt">サイファー</p>
+                <img class="val-type vt-rb" src="./Val Agents/Type/sentinel.png" alt="sentinel"/>
+                <p class="p-vertical p-rb p-type" id="val-type" name="val-type">sentinel</p>
+                <div class="tri-bot"></div>
+                <p class="p-bottom">Cypher</p>
+              </div>
+              <div class="card-logo-bottom">
+                <div class="tri-left-bottom"></div>
+                <div class="tri-right-bottom"></div>
+              </div>
+            </div>
+            <img class="val-agents" src="./Val Agents/Cypher/Cypher.png" alt="Cypher"/>
+          </div>
+          <div class="container d-none" id="initiator" name="initiator">
+            <h2 id="val-agent" name="val-agent">Fade</h2>
+            <p>フェード</p>
+            <div class="card fade">
+              <div class="card-logo-top">
+                <div class="tri-left-top"></div>
+                <div class="tri-right-top"></div>
+              </div>
+              <div class="border">
+                <p class="p-top">Fade</p>
+                <div class="tri-top"></div>
+                <p class="p-vertical p-lt">フェード</p>
+                <img class="val-type vt-rb" src="./Val Agents/Type/initiator.png" alt="initiator"/>
+                <p class="p-vertical p-rb p-type" id="val-type" name="val-type">initiator</p>
+                <div class="tri-bot"></div>
+                <p class="p-bottom">Fade</p>
+              </div>
+              <div class="card-logo-bottom">
+                <div class="tri-left-bottom"></div>
+                <div class="tri-right-bottom"></div>
+              </div>
+            </div>
+            <img class="val-agents" src="./Val Agents/Fade/Fade.png" alt="Fade"/>
+          </div>
+          <div class="container d-none" id="controller" name="controller">
+            <h2 id="val-agent" name="val-agent">Harbor</h2>
+            <p>ハーバー</p>
+            <div class="card harbor">
+              <div class="card-logo-top">
+                <div class="tri-left-top"></div>
+                <div class="tri-right-top"></div>
+              </div>
+              <div class="border">
+                <p class="p-top">Harbor</p>
+                <div class="tri-top"></div>
+                <p class="p-vertical p-lt">ハーバー</p>
+                <img class="val-type vt-rb" src="./Val Agents/Type/controller.png" alt="controller"/>
+                <p class="p-vertical p-rb p-type" id="val-type" name="val-type">controller</p>
+                <div class="tri-bot"></div>
+                <p class="p-bottom">Harbor</p>
+              </div>
+              <div class="card-logo-bottom">
+                <div class="tri-left-bottom"></div>
+                <div class="tri-right-bottom"></div>
+              </div>
+            </div>
+            <img class="val-agents" src="./Val Agents/Harbor/Harbor.png" alt="Harbor"/>
+          </div>
+          <div class="container d-none" id="duelist" name="duelist">
+            <h2 id="val-agent" name="val-agent">Jett</h2>
+            <p>ジェット</p>
+            <div class="card jett">
+              <div class="card-logo-top">
+                <div class="tri-left-top"></div>
+                <div class="tri-right-top"></div>
+              </div>
+              <div class="border">
+                <p class="p-top">Jett</p>
+                <div class="tri-top"></div>
+                <p class="p-vertical p-lt">ジェット</p>
+                <img class="val-type vt-rb" src="./Val Agents/Type/duelist.png" alt="duelist"/>
+                <p class="p-vertical p-rb p-type" id="val-type" name="val-type">duelist</p>
+                <div class="tri-bot"></div>
+                <p class="p-bottom">Jett</p>
+              </div>
+              <div class="card-logo-bottom">
+                <div class="tri-left-bottom"></div>
+                <div class="tri-right-bottom"></div>
+              </div>
+            </div>
+            <img class="val-agents" src="./Val Agents/Jett/Jett.png" alt="Jett"/>
+          </div>
+          <div class="container d-none" id="initiator" name="initiator">  
+            <h2 id="val-agent" name="val-agent">KAY/O</h2>
+            <p>ケイ/オー</p>
+            <div class="card kayo">
+              <div class="card-logo-top">
+                <div class="tri-left-top"></div>
+                <div class="tri-right-top"></div>
+              </div>
+              <div class="border">
+                <p class="p-top">KAY/O</p>
+                <div class="tri-top"></div>
+                <p class="p-vertical p-lb-l">ケイ/オー</p>
+                <img class="val-type vt-rb vt-rb-l" src="./Val Agents/Type/initiator.png" alt="initiator"/>
+                <p class="p-vertical p-rb p-rb-l p-type" id="val-type" name="val-type">initiator</p>
+                <div class="tri-bot"></div>
+                <p class="p-bottom">KAY/O</p>
+              </div>
+              <div class="card-logo-bottom">
+                <div class="tri-left-bottom"></div>
+                <div class="tri-right-bottom"></div>
+              </div>
+            </div>
+            <img class="val-agents" src="./Val Agents/Kayo/Kayo.png" alt="KAY/O"/>
+        </div>
+        <div class="container d-none" id="sentinel" name="sentinel">  
+          <h2 id="val-agent" name="val-agent">Killjoy</h2>
+          <p>ジェット</p>
+          <div class="card killjoy">
+            <div class="card-logo-top">
+              <div class="tri-left-top"></div>
+              <div class="tri-right-top"></div>
+            </div>
+            <div class="border">
+              <p class="p-top">KillJoy</p>
+              <div class="tri-top"></div>
+              <p class="p-vertical p-lt">キルジョイ</p>
+              <img class="val-type vt-rb vt-rb-l" src="./Val Agents/Type/sentinel.png" alt="sentinel"/>
+              <p class="p-vertical p-rb p-rb-l p-type" id="val-type" name="val-type">sentinel</p>
+              <div class="tri-bot"></div>
+              <p class="p-bottom">KillJoy</p>
+            </div>
+            <div class="card-logo-bottom">
+              <div class="tri-left-bottom"></div>
+              <div class="tri-right-bottom"></div>
+            </div>
+          </div>
+          <img class="val-agents" src="./Val Agents/Killjoy/KillJoy.png" alt="Killjoy"/>
+      </div>
+      <div class="container d-none" id="duelist" name="duelist">  
+        <h2 id="val-agent" name="val-agent">Neon</h2>
+        <p>ネオン</p>
+        <div class="card neon">
+          <div class="card-logo-top">
+            <div class="tri-left-top"></div>
+            <div class="tri-right-top"></div>
+          </div>
+          <div class="border">
+            <p class="p-top">Neon</p>
+            <div class="tri-top"></div>
+            <p class="p-vertical p-lb p-lb-l">ネオン</p>
+            <img class="val-type vt-rt" src="./Val Agents/Type/duelist.png" alt="duelist"/>
+            <p class="p-vertical p-rt p-type" id="val-type" name="val-type">duelist</p>
+            <div class="tri-bot"></div>
+            <p class="p-bottom">Neon</p>
+          </div>
+          <div class="card-logo-bottom">
+            <div class="tri-left-bottom"></div>
+            <div class="tri-right-bottom"></div>
+          </div>
+        </div>
+        <img class="val-agents" src="./Val Agents/Neon/Neon.png" alt="Neon"/>
+    </div>
+    <div class="container d-none" id="controller" name="controller">  
+      <h2 id="val-agent" name="val-agent">Omen</h2>
+      <p>前兆</p>
+      <div class="card omen">
+        <div class="card-logo-top">
+          <div class="tri-left-top"></div>
+          <div class="tri-right-top"></div>
+        </div>
+        <div class="border">
+          <p class="p-top">Omen</p>
+          <div class="tri-top"></div>
+          <p class="p-vertical p-lb">前兆</p>
+          <img class="val-type vt-rt" src="./Val Agents/Type/controller.png" alt="controller"/>
+          <p class="p-vertical p-rt p-type" id="val-type" name="val-type">controller</p>
+          <div class="tri-bot"></div>
+          <p class="p-bottom">Omen</p>
+        </div>
+        <div class="card-logo-bottom">
+          <div class="tri-left-bottom"></div>
+          <div class="tri-right-bottom"></div>
+        </div>
+      </div>
+      <img class="val-agents" src="./Val Agents/Omen/Omen.png" alt="Omen"/>
+  </div>
+  <div class="container d-none" id="duelist" name="duelist">  
+    <h2 id="val-agent" name="val-agent">Phoenix</h2>
+    <p>フェニックス</p>
+    <div class="card phoenix">
+      <div class="card-logo-top">
+        <div class="tri-left-top"></div>
+        <div class="tri-right-top"></div>
+      </div>
+      <div class="border">
+        <p class="p-top">Phoenix</p>
+        <div class="tri-top"></div>
+        <p class="p-vertical p-lt">フェニックス</p>
+        <img class="val-type vt-rb vt-rb-l" src="./Val Agents/Type/duelist.png" alt="duelist"/>
+        <p class="p-vertical p-rb p-rb-l p-type" id="val-type" name="val-type">duelist</p>
+        <div class="tri-bot"></div>
+        <p class="p-bottom">Phoenix</p>
+      </div>
+      <div class="card-logo-bottom">
+        <div class="tri-left-bottom"></div>
+        <div class="tri-right-bottom"></div>
+      </div>
+    </div>
+    <img class="val-agents d-none" src="./Val Agents/Phoenix/Phoenix.png" alt="Phoenix"/>
+    </div>
+    <div class="container d-none" id="duelist" name="duelist">  
+      <h2 id="val-agent" name="val-agent">Raze</h2>
+      <p>レイズ</p>
+      <div class="card raze">
+        <div class="card-logo-top">
+          <div class="tri-left-top"></div>
+          <div class="tri-right-top"></div>
+        </div>
+        <div class="border">
+          <p class="p-top">Raze</p>
+          <div class="tri-top"></div>
+          <p class="p-vertical p-lt">レイズ</p>
+          <img class="val-type vt-rb vt-rb-l" src="./Val Agents/Type/duelist.png" alt="duelist"/>
+          <p class="p-vertical p-rb p-rb-l p-type" id="val-type" name="val-type">duelist</p>
+          <div class="tri-bot"></div>
+          <p class="p-bottom">Raze</p>
+        </div>
+        <div class="card-logo-bottom">
+          <div class="tri-left-bottom"></div>
+          <div class="tri-right-bottom"></div>
+        </div>
+      </div>
+      <img class="val-agents" src="./Val Agents/Raze/Raze.png" alt="Raze"/>
+      </div>
+      <div class="container d-none" id="duelist" name="duelist">  
+        <h2 id="val-agent" name="val-agent">Reyna</h2>
+        <p>レイナ</p>
+        <div class="card reyna">
+          <div class="card-logo-top">
+            <div class="tri-left-top"></div>
+            <div class="tri-right-top"></div>
+          </div>
+          <div class="border">
+            <p class="p-top">Reyna</p>
+            <div class="tri-top"></div>
+            <p class="p-vertical p-lt">レイナ</p>
+            <img class="val-type vt-rt" src="./Val Agents/Type/duelist.png" alt="duelist"/>
+            <p class="p-vertical p-rt p-type" id="val-type" name="val-type">duelist</p>
+            <div class="tri-bot"></div>
+            <p class="p-bottom">Reyna</p>
+          </div>
+          <div class="card-logo-bottom">
+            <div class="tri-left-bottom"></div>
+            <div class="tri-right-bottom"></div>
+          </div>
+        </div>
+        <img class="val-agents" src="./Val Agents/Reyna/Reyna.png" alt="Reyna"/>
+        </div>
+        <div class="container d-none" id="sentinel" name="sentinel">  
+          <h2 id="val-agent" name="val-agent">Sage</h2>
+          <p>セージ</p>
+          <div class="card sage">
+            <div class="card-logo-top">
+              <div class="tri-left-top"></div>
+              <div class="tri-right-top"></div>
+            </div>
+            <div class="border">
+              <p class="p-top">Sage</p>
+              <div class="tri-top"></div>
+              <p class="p-vertical p-lt">セージ</p>
+              <img class="val-type vt-rt" src="./Val Agents/Type/sentinel.png" alt="sentinel"/>
+              <p class="p-vertical p-rt p-type" id="val-type" name="val-type">sentinel</p>
+              <div class="tri-bot"></div>
+              <p class="p-bottom">Sage</p>
+            </div>
+            <div class="card-logo-bottom">
+              <div class="tri-left-bottom"></div>
+              <div class="tri-right-bottom"></div>
+            </div>
+          </div>
+          <img class="val-agents" src="./Val Agents/Sage/Sage.png" alt="Sage"/>
+          </div>
+          <div class="container d-none" id="initiator" name="initiator">  
+            <h2 id="val-agent" name="val-agent">Skye</h2>
+            <p>スカイ</p>
+            <div class="card skye">
+              <div class="card-logo-top">
+                <div class="tri-left-top"></div>
+                <div class="tri-right-top"></div>
+              </div>
+              <div class="border">
+                <p class="p-top">Skye</p>
+                <div class="tri-top"></div>
+                <p class="p-vertical p-lt">スカイ</p>
+                <img class="val-type vt-rt" src="./Val Agents/Type/initiator.png" alt="initiator"/>
+                <p class="p-vertical p-rt p-type" id="val-type" name="val-type">initiator</p>
+                <div class="tri-bot"></div>
+                <p class="p-bottom">Skye</p>
+              </div>
+              <div class="card-logo-bottom">
+                <div class="tri-left-bottom"></div>
+                <div class="tri-right-bottom"></div>
+              </div>
+            </div>
+            <img class="val-agents" src="./Val Agents/Skye/Skye.png" alt="Skye"/>
+            </div>
+            <div class="container d-none" id="initiator" name="initiator">  
+              <h2 id="val-agent" name="val-agent">Sova</h2>
+              <p>ソバ</p>
+              <div class="card sova">
+                <div class="card-logo-top">
+                  <div class="tri-left-top"></div>
+                  <div class="tri-right-top"></div>
+                </div>
+                <div class="border">
+                  <p class="p-top">Sova</p>
+                  <div class="tri-top"></div>
+                  <p class="p-vertical p-lt">ソバ</p>
+                  <img class="val-type vt-rt" src="./Val Agents/Type/initiator.png" alt="initiator"/>
+                  <p class="p-vertical p-rt p-type" id="val-type" name="val-type">initiator</p>
+                  <div class="tri-bot"></div>
+                  <p class="p-bottom">Sova</p>
+                </div>
+                <div class="card-logo-bottom">
+                  <div class="tri-left-bottom"></div>
+                  <div class="tri-right-bottom"></div>
+                </div>
+              </div>
+              <img class="val-agents" src="./Val Agents/Sova/Sova.png" alt="Sova"/>
+              </div>
+              <div class="container d-none" id="controller" name="controller">  
+                <h2 id="val-agent" name="val-agent">Viper</h2>
+                <p>バイパー</p>
+                <div class="card viper">
+                  <div class="card-logo-top">
+                    <div class="tri-left-top"></div>
+                    <div class="tri-right-top"></div>
+                  </div>
+                  <div class="border">
+                    <p class="p-top">Viper</p>
+                    <div class="tri-top"></div>
+                    <p class="p-vertical p-lt">バイパー</p>
+                    <img class="val-type vt-rt" src="./Val Agents/Type/controller.png" alt="controller"/>
+                    <p class="p-vertical p-rt p-type" id="val-type" name="val-type">controller</p>
+                    <div class="tri-bot"></div>
+                    <p class="p-bottom">Viper</p>
+                  </div>
+                  <div class="card-logo-bottom">
+                    <div class="tri-left-bottom"></div>
+                    <div class="tri-right-bottom"></div>
+                  </div>
+                </div>
+                <img class="val-agents" src="./Val Agents/Viper/Viper.png" alt="Viper"/>
+                </div>
+                <div class="container d-none" id="duelist" name="duelist">  
+                  <h2 id="val-agent" name="val-agent">Yoru</h2>
+                  <p>夜</p>
+                  <div class="card yoru">
+                    <div class="card-logo-top">
+                      <div class="tri-left-top"></div>
+                      <div class="tri-right-top"></div>
+                    </div>
+                    <div class="border">
+                      <p class="p-top">Yoru</p>
+                      <div class="tri-top"></div>
+                      <p class="p-vertical p-lt">夜</p>
+                      <img class="val-type vt-rb" src="./Val Agents/Type/duelist.png" alt="duelist"/>
+                      <p class="p-vertical p-rb p-type" id="val-type" name="val-type">duelist</p>
+                      <div class="tri-bot"></div>
+                      <p class="p-bottom">Yoru</p>
+                    </div>
+                    <div class="card-logo-bottom">
+                      <div class="tri-left-bottom"></div>
+                      <div class="tri-right-bottom"></div>
+                    </div>
+                  </div>
+                  <img class="val-agents" src="./Val Agents/Yoru/Yoru.png" alt="Yoru"/>
+                  </div>
+    </main>
+</body>
+   <script src="index.js"></script>
+</html>
